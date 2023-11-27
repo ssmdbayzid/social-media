@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 
+
 const 
 AddMedia = () => {
     const [mediaName, setMediaName] = useState('');
       const [mediaImage, setMediaImage] = useState(null);
-
+    
 
 
   const handleNameChange = (e) => {
@@ -22,10 +23,10 @@ AddMedia = () => {
     // Here you can handle the form submission and image upload logic.
     // You might want to use libraries like Axios to send the form data to your server.
 
-    console.log('Media Name:', mediaName);
-    console.log('Media Image:', mediaImage);
+    // console.log('Media Name:', mediaName);
+    // console.log('Media Image:', mediaImage);
   
-
+    
   try {
     const formData = new FormData();
     formData.append('key', '15abb5d6d10c5792735d187ebb3d95b0'); // Replace with your ImgBB API key
@@ -40,6 +41,8 @@ AddMedia = () => {
     console.error('Error uploading image:', error.message);
   }
 };
+
+  
   return (
     <div className="max-w-md mx-auto p-6 border rounded shadow">
       <h2 className="text-lg font-semibold mb-4">Add Media Form</h2>
